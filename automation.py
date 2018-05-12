@@ -5,7 +5,7 @@ import os
 # Global Constants
 CLONE_REPO = "git clone https://github.com/ccoble-southhills/cp332-project6.git"
 REPO_DIR = "cp332-project6"
-RM_REPO = "rm -rf "
+RM_RF = "rm -rf "
 
 def main():
     gitIt()
@@ -13,7 +13,7 @@ def main():
 
 def gitIt():
     if os.path.isdir(REPO_DIR): # Check if directory exists
-        os.system(RM_REPO + REPO_DIR) # Recusively delete files and folders if it does
+        os.system(RM_RF + REPO_DIR) # Recusively delete files and folders if it does
     try:
         os.system(CLONE_REPO) # Clone Repo
         print("Repo Cloned Successfully!")
