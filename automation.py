@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 import sys
 import os
+import subprocess
 
 
 # Global Constants
@@ -8,9 +9,18 @@ CLONE_REPO = "git clone https://github.com/ccoble-southhills/cp332-project6.git"
 REPO_DIR = "cp332-project6"
 RM_RF = "rm -rf "
 
-def main():
-    gitIt()
 
+def main():
+    # Remove Old / Get New
+    gitIt()
+    revHash = gitRevisionHash()
+    print(revHash.strip())
+
+
+def gitRevisionHash():
+    # Move to correct DIR
+    os.chdir(REPO_DIR)
+    return subprocess.check_output(['git', 'rev-parse', 'HEAD'])
 
 def gitIt():
     rmrfOldData() # Check for existing data / rm rf if exists
