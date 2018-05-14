@@ -62,10 +62,10 @@ def exceptionKillDef(ex):
     print(ex)
     try:
         with open('results.txt', 'w+') as results: 
-            results.write("----------FAILURE----------")
+            results.write("------ START FAILURE-------")
             results.write(version if version else 'Version: Unavailable')
             results.write(revHash if revHash else 'Hash: Unavailable')
-            results.write("----------FAILURE----------")
+            results.write("^^^^^^^ END FAILURE ^^^^^^^")
     except:
         pass
 
