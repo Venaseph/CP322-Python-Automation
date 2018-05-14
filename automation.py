@@ -2,12 +2,14 @@
 import sys
 import os
 import subprocess
+import time
 
 
 # Global Constants
 CLONE_REPO = "git clone https://github.com/ccoble-southhills/cp332-project6.git"
 REPO_DIR = "cp332-project6"
 RM_RF = "rm -rf "
+START_TIME = time.ctime()
 
 #Global Vars
 testCaseResults = {'Pass': 0, 'Fail': 0}
@@ -22,6 +24,7 @@ def main():
     gitVersion()
     gitRevisionHash()
 
+    print(START_TIME)
     print(version)
     print(revHash)
 
@@ -29,8 +32,9 @@ def main():
 def gitVersion():
     global version
 
-    os.chdir(REPO_DIR)
     try:
+        # Change to correct DIR
+        os.chdir(REPO_DIR)
         with open('VERSION', 'r') as versionFile:
             # Grab version, remove newline
             version = versionFile.read()[:-1]
@@ -61,11 +65,13 @@ def rmrfOldData():
 def exceptionKillDef(ex):
     print(ex)
     try:
-        with open('results.txt', 'w+') as results: 
-            results.write("------ START FAILURE-------")
+        with open('results.txt', 'w+') as results:
+            results.write('------ START FAILURE-------')
+            results.write(START_TIME)
             results.write(version if version else 'Version: Unavailable')
             results.write(revHash if revHash else 'Hash: Unavailable')
-            results.write("^^^^^^^ END FAILURE ^^^^^^^")
+            results.write(ex)
+            results.write('^^^^^^^ END FAILURE ^^^^^^^')
     except:
         pass
 
