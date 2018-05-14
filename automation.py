@@ -14,13 +14,15 @@ def main():
     # Remove Old / Get New
     gitIt()
     revHash = gitRevisionHash()
-    print(revHash.strip())
+    print(revHash)
 
 
 def gitRevisionHash():
     # Move to correct DIR
     os.chdir(REPO_DIR)
-    return subprocess.check_output(['git', 'rev-parse', 'HEAD'])
+    # return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
+    return subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip()
+
 
 def gitIt():
     rmrfOldData() # Check for existing data / rm rf if exists
