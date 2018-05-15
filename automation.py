@@ -3,6 +3,8 @@ import sys
 import os
 import subprocess
 import time
+import urllib.request
+import hashlib
 
 
 # Global Constants
@@ -16,14 +18,14 @@ PIC_LINK = 'https://s3.amazonaws.com/southhills/pics/'
 testCaseResults = {'Attempts': 0, 'Pass': 0, 'Fail': 0}
 version = None
 revHash = None
-# commands Dictonary holds {key=scriptArg, [ExpStatusCode, runtime, md5sum, ]}
-commands = {'dog': [0, 'pic1'], 
-            'ducks': [0, 'pic2'],
-            'flower': [0, 'pic3'],
-            'moon': [0, 'pic4'], 
-            'mountain': [0, 'pic5'],
-            ' ': [2],
-            'sun': [2]}
+# commands DataModel holds {key=scriptArg, [ExpStatusCode, PicComp, checksum, md5]}
+commands = {'dog': [0, 'pic1', 'chksum'], 
+            'ducks': [0, 'pic2', 'chksum'],
+            'flower': [0, 'pic3', 'chksum'],
+            'moon': [0, 'pic4', 'chksum'], 
+            'mountain': [0, 'pic5', 'chksum'],
+            ' ': [2, None, None],
+            'sun': [2, None, None]}
 
 
 def main():
@@ -32,6 +34,7 @@ def main():
     # Retrieve Repo Hash and Versions
     gitVersion()
     gitRevisionHash()
+    getMD5s()
     testController()
 
 
@@ -41,7 +44,6 @@ def main():
 
 
 def testController():
-    global commands
     os.chdir(REPO_DIR)
     for key, value in commands.items():
         runScript(key, value)
@@ -51,15 +53,28 @@ def runScript(key, value):
 
     arg = key
     try:
-        print(os.getcwd())
+        #print(os.getcwd())
         output = subprocess.check_output(['python', 'getpicture', arg], stderr=subprocess.STDOUT).decode('utf-8')
-        print(output)
+        print(key + " " + output[:-1])
     except Exception as ex:
-        print(key + " failed: ", ex)
+        print(key + " Failed: ", ex)
+
+
+def getMD5s():
+    global commands
+    for key, value in commands.items():
+        if value[1]:
+            try:
+                grabMD5 = urllib.request.urlopen('https://s3.amazonaws.com/southhills/pics/' + value[1] + '.md5')
+                value[2] = grabMD5.read().decode('utf-8')
+            except Exception as ex:
+                value[2] = ex
+            finally:
+                print(value[2])
+
 
 def gitVersion():
     global version
-
     try:
         # Create var for opening the VERSION file in repo using os
         verFile = os.path.join(os.getcwd(), REPO_DIR, 'VERSION')
