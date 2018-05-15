@@ -15,17 +15,17 @@ START_TIME = time.ctime()
 PIC_LINK = 'https://s3.amazonaws.com/southhills/pics/'
 
 #Global Vars
-testCaseResults = {'Attempts': 0, 'Pass': 0, 'Fail': 0}
+testCaseResults = {'Run': 0, 'Pass': 0, 'Fail': 0}
 version = None
 revHash = None
-# commands DataModel holds {key=scriptArg, [ExpStatusCode, PicComp, checksum, md5]}
-commands = {'dog': [0, 'pic1', 'chksum'], 
-            'ducks': [0, 'pic2', 'chksum'],
-            'flower': [0, 'pic3', 'chksum'],
-            'moon': [0, 'pic4', 'chksum'], 
-            'mountain': [0, 'pic5', 'chksum'],
-            ' ': [2, None, None],
-            'sun': [2, None, None]}
+# commands DataModel holds {key=scriptArg, [ExpStatusCode, PicComp, exMD5, acMD5, statusCode, log, commandRun]}
+commands = {'dog': [0, 'pic1', 'exMD5', 'acMD5', 'stCode', 'log', 'commandRun'], 
+            'ducks': [0, 'pic2', 'exMD5', 'acMD5', 'stCode', 'log', 'commandRun'],
+            'flower': [0, 'pic3', 'exMD5', 'acMD5', 'stCode', 'log', 'commandRun'],
+            'moon': [0, 'pic4', 'exMD5', 'acMD5', 'stCode', 'log', 'commandRun'], 
+            'mountain': [0, 'pic5', 'exMD5', 'acMD5', 'stCode', 'log', 'commandRun'],
+            ' ': [2, None, None, None, 'stCode', 'log', 'commandRun'],
+            'sun': [2, None, None, None, 'stCode', 'log', 'commandRun']}
 
 
 def main():
@@ -41,23 +41,34 @@ def main():
     print(START_TIME)
     print(version)
     print(revHash)
+    print(testCaseResults['Run'])
 
 
 def testController():
     os.chdir(REPO_DIR)
     for key, value in commands.items():
         runScript(key, value)
+        hashHandling(key, value)
+
+
+def hashHandling(key, value):
+    if value[]
 
 
 def runScript(key, value):
-
-    arg = key
+    global testCaseResults
+    testCaseResults['Run'] += 1
     try:
-        #print(os.getcwd())
-        output = subprocess.check_output(['python', 'getpicture', arg], stderr=subprocess.STDOUT).decode('utf-8')
-        print(key + " " + output[:-1])
+        value[5] = subprocess.check_output(['python', 'getpicture', key], stderr=subprocess.STDOUT).decode('utf-8')
+        value[4] = 0
+        # print(key + " " + output[:-1])
     except Exception as ex:
-        print(key + " Failed: ", ex)
+        value[5] = str(ex)
+        string = str(ex)[-2:]
+        value[4] = string[:-1]
+        # print(key + " Failed: ", ex)
+    # finally:
+    #     print(value[4])
 
 
 def getMD5s():
@@ -69,8 +80,8 @@ def getMD5s():
                 value[2] = grabMD5.read().decode('utf-8')
             except Exception as ex:
                 value[2] = ex
-            finally:
-                print(value[2])
+            # finally:
+            #     print(value[2])
 
 
 def gitVersion():
