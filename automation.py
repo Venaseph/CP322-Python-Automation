@@ -14,8 +14,9 @@ RM_RF = "rm -rf "
 START_TIME = time.ctime()
 PIC_LINK = 'https://s3.amazonaws.com/southhills/pics/'
 
+
 #Global Vars
-testCaseResults = {'Run': 0, 'Pass': 0, 'Fail': 0}
+testCaseResults = {'Run': 0, 'scriptPass': 0, 'Pass': 0, 'Fail': 0}
 version = None
 revHash = None
 # commands DataModel holds {key=scriptArg, [ExpStatusCode, PicComp, exMD5, acMD5, statusCode, log, commandRun]}
@@ -36,15 +37,35 @@ def main():
     gitRevisionHash()
     getMD5s()
     testController()
+    printResultsController()
 
 
-    print(START_TIME)
-    print(version)
-    print(revHash)
-    print(testCaseResults['Run'])
+def printResultsController():
+    # platform independant folder back using sep/norm instead of pathjoin
+    os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
+    with open('results.txt', 'a+') as results:
+        results.write('\n' + START_TIME)
+        results.write('Version: ' + version)
+        results.write(('Hash: ' + revHash)
+        results.write('Ran: ' + str(testCaseResults['Run']) + '     Pass: ' + str(testCaseResults['Pass']) + '     Fail: ' + str(testCaseResults['Fail']))
+        for key, value in commands.items():
+            results.write('\nCommand: ' + value[6])
+            results.write('Script Result: ' + value[5])
+            results.write('MD5/JPG: ' + (value[3]))
+    sys.exit(0)  
+
+    print('\n' + START_TIME)
+    print('Version: ' + version)
+    print('Hash: ' + revHash)
+    print('Ran: ' + str(testCaseResults['Run']) + '     Pass: ' + str(testCaseResults['Pass']) + '     Fail: ' + str(testCaseResults['Fail']))
+    for key, value in commands.items():
+        print('\nCommand: ' + value[6])
+        print('Script Result: ' + value[5])
+        print('MD5/JPG: ' + (value[3]))
 
 
 def testController():
+    #move to correct DIR
     os.chdir(REPO_DIR)
     for key, value in commands.items():
         runScript(key, value)
@@ -52,23 +73,45 @@ def testController():
 
 
 def hashHandling(key, value):
-    if value[]
+
+    #if expected exists and download was successful  
+    if value[4] is 0 and value[2]:
+        # get hash of downloaded picture with horrible file name creation as binary
+        with open(('0000' + str(testCaseResults['scriptPass'] - 1) + '.jpg'), 'rb') as file:
+            data = file.read()
+            # Hexdigest it 
+            acMD5 = hashlib.md5(data).hexdigest()
+            # Comparision handling
+            if value[2].decode('utf-8') == acMD5:
+                testCaseResults['Pass'] += 1
+                value[3] = 'Match'
+            else:
+                testCaseResults['Fail'] += 1
+                value[3] = 'Fail'
+    else:
+        value[3] = 'N/A'
 
 
 def runScript(key, value):
-    global testCaseResults
+    # global testCaseResults, commands
+    # Incr total cases run
     testCaseResults['Run'] += 1
+    value[6] = 'python getpicture ' + key
     try:
-        value[5] = subprocess.check_output(['python', 'getpicture', key], stderr=subprocess.STDOUT).decode('utf-8')
+        # Run script test / Save log results
+        value[5] = subprocess.check_output(['python', 'getpicture', key], stderr=subprocess.STDOUT).decode('utf-8')[:-1]
+        # Record Success
         value[4] = 0
-        # print(key + " " + output[:-1])
+        # Incr scriptPass Counter
+        testCaseResults['scriptPass'] += 1
     except Exception as ex:
+        # Save log results
         value[5] = str(ex)
         string = str(ex)[-2:]
+        # Save statusCode
         value[4] = string[:-1]
-        # print(key + " Failed: ", ex)
-    # finally:
-    #     print(value[4])
+        # Increment fail counter
+        testCaseResults['Fail'] += 1
 
 
 def getMD5s():
@@ -77,7 +120,7 @@ def getMD5s():
         if value[1]:
             try:
                 grabMD5 = urllib.request.urlopen('https://s3.amazonaws.com/southhills/pics/' + value[1] + '.md5')
-                value[2] = grabMD5.read().decode('utf-8')
+                value[2] = grabMD5.read()[:-1]
             except Exception as ex:
                 value[2] = ex
             # finally:
