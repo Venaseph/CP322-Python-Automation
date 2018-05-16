@@ -44,24 +44,17 @@ def printResultsController():
     # platform independant folder back using sep/norm instead of pathjoin
     os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
     with open('results.txt', 'a+') as results:
-        results.write('\n' + START_TIME)
-        results.write('Version: ' + version)
-        results.write(('Hash: ' + revHash)
-        results.write('Ran: ' + str(testCaseResults['Run']) + '     Pass: ' + str(testCaseResults['Pass']) + '     Fail: ' + str(testCaseResults['Fail']))
+        results.write('\n' + '---------------------------')
+        results.write('\n' + START_TIME + '\n')
+        results.write('Version: ' + version + '\n')
+        results.write('Hash: ' + revHash + '\n')
+        results.write('Ran: ' + str(testCaseResults['Run']) + '     Pass: ' + str(testCaseResults['Pass']) + '     Fail: ' + str(testCaseResults['Fail']) + '\n')
         for key, value in commands.items():
-            results.write('\nCommand: ' + value[6])
-            results.write('Script Result: ' + value[5])
-            results.write('MD5/JPG: ' + (value[3]))
+            results.write('\nCommand: ' + value[6] + '\n')
+            results.write('Script Result: ' + value[5] + '\n')
+            results.write('MD5/JPG: ' + (value[3]) + '\n')
+        results.write('---------------------------' + '\n')
     sys.exit(0)  
-
-    print('\n' + START_TIME)
-    print('Version: ' + version)
-    print('Hash: ' + revHash)
-    print('Ran: ' + str(testCaseResults['Run']) + '     Pass: ' + str(testCaseResults['Pass']) + '     Fail: ' + str(testCaseResults['Fail']))
-    for key, value in commands.items():
-        print('\nCommand: ' + value[6])
-        print('Script Result: ' + value[5])
-        print('MD5/JPG: ' + (value[3]))
 
 
 def testController():
