@@ -5,6 +5,7 @@ import subprocess
 import time
 import urllib.request
 import hashlib
+import re
 
 
 # Global Constants
@@ -103,21 +104,22 @@ def runScript(key, value):
         string = str(ex)[-2:]
         # Save statusCode
         value[4] = string[:-1]
-        # Increment fail counter
-        testCaseResults['Fail'] += 1
-
+        # Increment fail counter or pass on expected failcases
+        if re.fullmatch('[ ]', key) or key == 'sun':
+            testCaseResults['Pass'] += 1
+        else:
+            testCaseResults['Fail'] += 1
 
 def getMD5s():
     global commands
     for key, value in commands.items():
         if value[1]:
             try:
+                #get exMD5 from server
                 grabMD5 = urllib.request.urlopen('https://s3.amazonaws.com/southhills/pics/' + value[1] + '.md5')
                 value[2] = grabMD5.read()[:-1]
             except Exception as ex:
                 value[2] = ex
-            # finally:
-            #     print(value[2])
 
 
 def gitVersion():

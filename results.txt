@@ -1,0 +1,595 @@
+
+---------------------------
+Wed May 16 19:43:22 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 1     Fail: 6
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:43:33 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 0     Fail: 7
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:43:48 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 2     Fail: 5
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:45:40 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 6     Fail: 1
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:51:56 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 4     Fail: 3
+
+Command: python getpicture dog
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00002.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00003.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:53:49 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 2     Fail: 5
+
+Command: python getpicture dog
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:54:49 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 2     Fail: 5
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:55:34 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 2     Fail: 5
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:56:17 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 3     Fail: 4
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00002.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:58:39 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 3     Fail: 4
+
+Command: python getpicture dog
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 19:59:22 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 3     Fail: 4
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00002.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:00:35 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 2     Fail: 5
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:01:33 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 7     Fail: 0
+
+Command: python getpicture dog
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00002.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:02:17 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 3     Fail: 4
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:02:28 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 4     Fail: 3
+
+Command: python getpicture dog
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Match
+
+Command: python getpicture ducks
+Script Result: Command '['python', 'getpicture', 'ducks']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture flower
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture moon
+Script Result: Command '['python', 'getpicture', 'moon']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:02:39 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 3     Fail: 4
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Command '['python', 'getpicture', 'mountain']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
+
+---------------------------
+Wed May 16 20:03:17 2018
+Version: 1.2.3-beta.1
+Hash: 1a53186fc9e900ca19f0983ea162640ac95ec9d4
+Ran: 7     Pass: 4     Fail: 3
+
+Command: python getpicture dog
+Script Result: Command '['python', 'getpicture', 'dog']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture ducks
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00000.jpg
+MD5/JPG: Fail
+
+Command: python getpicture flower
+Script Result: Command '['python', 'getpicture', 'flower']' returned non-zero exit status 1.
+MD5/JPG: N/A
+
+Command: python getpicture moon
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00001.jpg
+MD5/JPG: Match
+
+Command: python getpicture mountain
+Script Result: Success:  picture saved at /Users/venaseph/Python/Automation/cp332-project6/00002.jpg
+MD5/JPG: Match
+
+Command: python getpicture  
+Script Result: Command '['python', 'getpicture', ' ']' returned non-zero exit status 2.
+MD5/JPG: N/A
+
+Command: python getpicture sun
+Script Result: Command '['python', 'getpicture', 'sun']' returned non-zero exit status 2.
+MD5/JPG: N/A
+---------------------------
